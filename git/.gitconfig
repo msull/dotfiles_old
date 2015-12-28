@@ -3,3 +3,5 @@
 	email = sully@sadburger.coM
 [core]
 	editor = vim
+[push]
+	default = matching
