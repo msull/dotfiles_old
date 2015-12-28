@@ -1,3 +1,5 @@
+set nocompatible
+
 execute pathogen#infect()
 filetype plugin indent on
 syntax enable
@@ -9,11 +11,11 @@ let g:solarized_termtrans = 1
 
 colorscheme solarized
 
-set nocompatible
 set modelines=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set shiftround
 set expandtab
 set encoding=utf-8
 set showmode
@@ -35,6 +37,8 @@ set wrap
 set linebreak
 set nolist
 set colorcolumn=80
+
+set mouse=a
 
 
 let mapleader="\<SPACE>"
