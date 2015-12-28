@@ -1,5 +1,4 @@
 #!/bin/bash
-
-echo "Syncing VIM"
+./git/sync.sh
 ./vim/sync.sh
 
