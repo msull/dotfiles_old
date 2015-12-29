@@ -12,11 +12,11 @@ filetype plugin indent on
 syntax enable
 set background=dark
 " solarized options 
-"" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
 
-colorscheme solarized
+if filereadable('~/.vim_plugins/vim-colors-solarized')
+	colorscheme solarized
+endif
 
 set modelines=0
 set tabstop=4
