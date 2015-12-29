@@ -25,8 +25,13 @@
     git: repo=https://www.github.com/msull/dotfiles dest=/home/vagrant/dotfiles
     become: yes
     become_user: vagrant
+  - name: Sync dotfiles
+    command: /home/vagrant/dotfiles/sync.sh
+    become: yes
+    become_user: vagrant
   - name: Add public keys
     authorized_key:
       user: vagrant
       key: https://www.github.com/msull.keys
       manage_dir: no
+

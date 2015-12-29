@@ -1,4 +1,5 @@
 #!/bin/bash
-./git/sync.sh
-./vim/sync.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+${DIR}/git/sync.sh
+${DIR}/vim/sync.sh
 
