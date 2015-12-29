@@ -1,0 +1,31 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: install packages
+    apt: name={{item}} state=present update_cache=yes
+    with_items:
+      - python-pip
+      - silversearcher-ag
+      - git
+      - mercurial
+      - make
+      - build-essential
+      - libssl-dev
+      - zlib1g-dev
+      - libbz2-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - wget
+      - curl
+      - llvm
+      - libncurses5-dev
+  - name: Clone dotfiles repo
+    git: repo=https://www.github.com/msull/dotfiles dest=/home/vagrant/dotfiles
+    become: yes
+    become_user: vagrant
+  - name: Add public keys
+    authorized_key:
+      user: vagrant
+      key: https://www.github.com/msull.keys
+      manage_dir: no
