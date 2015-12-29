@@ -1,2 +1,1 @@
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
+Plug 'tpop/vim-fugitive'

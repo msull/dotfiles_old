@@ -20,6 +20,7 @@
       - curl
       - llvm
       - libncurses5-dev
+      - cmake
   - name: Clone dotfiles repo
     git: repo=https://www.github.com/msull/dotfiles dest=/home/vagrant/dotfiles
     become: yes
