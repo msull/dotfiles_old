@@ -1,11 +1,18 @@
-set nocompatible
+" Initialise vim-plug
 
-execute pathogen#infect()
+call plug#begin('~/.vim_plugins')
+
+" Load plugin list for vim-plug to manage.
+execute 'source' Dot('plugins.vim')
+
+" Lock in the plugin list.
+call plug#end()
+
 filetype plugin indent on
 syntax enable
 set background=dark
 " solarized options 
-" let g:solarized_visibility = "high"
+"" let g:solarized_visibility = "high"
 " let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
 

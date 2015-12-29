@@ -4,30 +4,28 @@ echo 'Syncing vim settings'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 NOW=$(date +"%m_%d_%Y")
 # Symlink the vimrc file
-echo 'Symlinking .vimrc'
-if [ -L ~/.vimrc ]
+echo 'Creating .vimrc'
+if [ -f ~/.vimrc ]
 then
-    echo 'Already a symlink'
-    unlink ~/.vimrc
-    ln -s ${DIR}/.vimrc ~/.vimrc
-else
-    echo 'Backing up existing .vimrc'
-    mv ~/.vimrc ~/.vimrc.bak-${NOW}
-    ln -s ${DIR}/.vimrc ~/.vimrc
+    rm -f ~/.vimrc
 fi
+
+cp ${DIR}/_vimrc ~/.vimrc
+
+echo 'Create directories'
+mkdir -p ~/.vim/ ~/.vim_plugins
 
 # Setup directories
-echo 'Syncing Snippets'
-mkdir -p ~/.vim/UltiSnips
-rsync --del -r ${DIR}/snippets/ ~/.vim/UltiSnips/
+echo 'Syncing .vim directory'
+rsync --del -r ${DIR}/_vim/ ~/.vim/
 
-# Install Pathogen
-if [ ! -e ~/.vim/autoload/pathogen.vim ]
+# Install Plugin
+if [ ! -f ~/.vim/autoload/plug.vim ]
 then
-    echo 'Installing Pathogen'
-    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    echo 'installing vim-plug'
+    curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 else
-    echo 'Pathogen already installed'
+    echo 'vim-plug already installed'
 fi
 
+vim +"PlugSnapshot $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa
