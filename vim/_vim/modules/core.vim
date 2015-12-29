@@ -70,3 +70,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 nmap <leader>ws :set list!<CR>
 " automatically change window's cwd to file's dir
 set autochdir
+
+" Print out the current mappings.
+function! s:show_mappings()
+  let path = Dot('mappings.sh')
+  exec '!' . path
+endfunction
+
+nnoremap <leader><leader> :call <SID>show_mappings()<CR>
+
+" Quick session bindings.
+nnoremap <leader>sw :mksession! .quicksave.vim<CR>:echo "Session saved."<CR>
+nnoremap <leader>sr :source .quicksave.vim<CR>:echo "Session loaded."<CR>
