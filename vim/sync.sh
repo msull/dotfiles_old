@@ -17,7 +17,7 @@ mkdir -p ~/.vim/ ~/.vim_plugins
 
 # Setup vim directories
 echo 'Syncing .vim directory'
-rsync --del -r --exclude=autload ${DIR}/_vim/ ~/.vim/
+rsync --del -r --exclude=autoload ${DIR}/_vim/ ~/.vim/
 
 # Install Plugin
 mkdir -p ~/.vim/autoload

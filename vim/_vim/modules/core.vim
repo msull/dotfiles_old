@@ -14,9 +14,8 @@ set background=dark
 " solarized options 
 let g:solarized_termtrans = 1
 
-if filereadable('~/.vim_plugins/vim-colors-solarized')
-	colorscheme solarized
-endif
+silent! colorscheme solarized
+
 
 set modelines=0
 set tabstop=4
