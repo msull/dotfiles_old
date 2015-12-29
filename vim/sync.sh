@@ -15,11 +15,12 @@ cp ${DIR}/_vimrc ~/.vimrc
 echo 'Create directories'
 mkdir -p ~/.vim/ ~/.vim_plugins
 
-# Setup directories
+# Setup vim directories
 echo 'Syncing .vim directory'
 rsync --del -r ${DIR}/_vim/ ~/.vim/
 
 # Install Plugin
+mkdir -p ~/.vim/autoload
 if [ ! -f ~/.vim/autoload/plug.vim ]
 then
     echo 'installing vim-plug'
@@ -28,4 +29,4 @@ else
     echo 'vim-plug already installed'
 fi
 
-vim +"PlugSnapshot $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa
+vim +PlugUpgrade +PlugClean! +PlugUpdate +qa
