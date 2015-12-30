@@ -10,3 +10,8 @@ endfunction
 for file in split(glob(Dot('modules/*.vim')), '\n')
   execute 'source' file
 endfor
+
+" Load all plugin specific configuration modules.
+for file in split(glob(Dot('modules/plugins/*.vim')), '\n')
+  execute 'source' file
+endfor
