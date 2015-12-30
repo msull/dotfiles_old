@@ -53,11 +53,11 @@ inoremap jk <ESC>
 nnoremap <leader>p :set nopaste!<CR>
 nnoremap <leader>n :set nonumber!<CR>
 nnoremap <leader>rn :set norelativenumber!<CR>
-noremap <leader>h <c-w>h
-noremap <leader>l <c-w>l
-noremap <leader>k <c-w>k
-noremap <leader>j <c-w>j
-noremap <leader>en :!node % 
+nnoremap <leader>h <c-w>h
+nnoremap <leader>l <c-w>l
+nnoremap <leader>k <c-w>k
+nnoremap <leader>j <c-w>j
+nnoremap <leader>en :!node % 
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:ycm_key_list_select_completion=[]
@@ -67,7 +67,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Use <leader>l to toggle display of whitespace
-nmap <leader>ws :set list!<CR>
+nnoremap <leader>ws :set list!<CR>
 " automatically change window's cwd to file's dir
 set autochdir
 

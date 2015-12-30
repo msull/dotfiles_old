@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ag "map" ~/.vim --ignore mappings.sh --nogroup --nocolor | cut -d' ' -f3- | sort
+ag "noremap" ~/.vim --ignore mappings.sh --nogroup --nocolor | cut -d' ' -f2- | sort
