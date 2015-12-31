@@ -44,7 +44,7 @@ set linebreak
 set nolist
 set colorcolumn=80
 
-set mouse=a
+" set mouse=a
 
 
 let mapleader="\<SPACE>"

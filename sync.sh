@@ -1,7 +1,10 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-for subdir in {bash,git,vim}/sync.sh; do
-    [ -r "${DIR}${subdirfile}" ] && [ -f "${DIR}${subdirfile}" ] && "${DIR}${subdirfile}";
-done;
-unset subdir;
+for SUBDIR in bash git vim
+do
+    FULLPATH="${DIR}/${SUBDIR}/sync.sh"
+    echo $FULLPATH
+    [ -r "${FULLPATH}" ] && [ -f "${FULLPATH}" ] && "${FULLPATH}";
+done
+unset SUBDIR;
