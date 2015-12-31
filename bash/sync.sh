@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo 'Syncing git settings'
+echo 'Syncing bash settings'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-# NOW=$(date +"%m_%d_%Y")
 rsync --exclude sync.sh ${DIR}/ ~/ 

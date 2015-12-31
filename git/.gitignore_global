@@ -1,0 +1,30 @@
+.python-version
+
+# Dir that can be added to any project and ignored
+ignoredir
+
+# Vagrant working dir
+.vagrant
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# IntelliJ files
+.idea
+*.iml
+
+# Sublime Text3 files
+*.sublime-project
+*.sublime-workspace
+.anaconda

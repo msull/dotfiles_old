@@ -1,7 +1,10 @@
 [user]
 	name = Sully Sullenberger
-	email = sully@sadburger.coM
+	email = sully@sadburger.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
 [push]
-	default = matching
+	default = current
+[pull]
+	default = current
