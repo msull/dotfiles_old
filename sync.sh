@@ -1,5 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-${DIR}/git/sync.sh
-${DIR}/vim/sync.sh
 
+for subdir in {bash,git,vim}/sync.sh; do
+    [ -r "${DIR}${subdirfile}" ] && [ -f "${DIR}${subdirfile}" ] && "${DIR}${subdirfile}";
+done;
+unset subdir;

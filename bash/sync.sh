@@ -3,4 +3,4 @@
 echo 'Syncing bash settings'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-rsync --exclude sync.sh ${DIR}/ ~/ 
+rsync -r --exclude sync.sh ${DIR}/ ~/ 
