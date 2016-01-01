@@ -2,13 +2,10 @@
 - hosts: all
   sudo: yes
   tasks:
-  - name: install packages
+  - name: install base development packages
     apt: name={{item}} state=present update_cache=yes
     with_items:
       - python-pip
-      - silversearcher-ag
-      - git
-      - mercurial
       - make
       - build-essential
       - libssl-dev
@@ -21,7 +18,14 @@
       - llvm
       - libncurses5-dev
       - cmake
+      - exuberant-ctags
+  - name: Install applications
+    apt: name={{item}} state=present
+    with_items:
+      - silversearcher-ag
       - httpie
+      - git
+      - mercurial
   - name: Clone dotfiles repo
     git: repo=https://www.github.com/msull/dotfiles dest=/home/vagrant/dotfiles
     become: yes
