@@ -55,4 +55,19 @@
     ignore_errors: yes
     environment:
       PYENV_ROOT: /python
+  - name: Install Python 3.5.1
+    shell: '/python/libexec/pyenv install 3.5.1'
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+    environment:
+      PYENV_ROOT: /python
+  - name: Set python 3.5.1 as default
+    shell: '/python/libexec/pyenv global 3.5.1'
+    become: yes
+    become_user: vagrant
+    ignore_errors: yes
+    environment:
+      PYENV_ROOT: /python
+
 
