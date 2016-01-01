@@ -37,7 +37,7 @@ shopt -s histappend;
 shopt -s cdspell;
 
 export PYENV_ROOT=/python
-export PATH="${PYENV_ROOT}//bin:$PATH"
+export PATH="${PYENV_ROOT}/bin:$PATH"
 if which pyenv > /dev/null; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"

@@ -34,4 +34,14 @@
       user: vagrant
       key: https://www.github.com/msull.keys
       manage_dir: no
+  - name: Make /python directory
+    file: path=/python state=directory owner=vagrant group=vagrant
+  - name: Clone pyenv repo
+    git: repo=https://www.github.com/yyuu/pyenv.git dest=/python
+    become: yes
+    become_user: vagrant
+  - name: Install pyenv
+    command: PYENV_ROOT=/python curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+    become: yes
+    become_user: vagrant
 
