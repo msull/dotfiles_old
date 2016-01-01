@@ -36,13 +36,9 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-eval "$(pyenv virtualenv-init -)"
-
-export PATH="/home/vagrant/.pyenv/bin:$PATH"
+export PYENV_ROOT=/python
+export PATH="${PYENV_ROOT}//bin:$PATH"
 if which pyenv > /dev/null; then
 	eval "$(pyenv init -)"
-fi
-if which pyenv > /dev/null; then
 	eval "$(pyenv virtualenv-init -)"
 fi
