@@ -52,6 +52,7 @@
     shell: 'eval "$(/python/bin/pyenv init -)" && /python/libexec/pyenv install 2.7.11 && /python/libexec/pyenv install 3.5.1'
     become: yes
     become_user: vagrant
+    ignore_errors: yes
     environment:
       PYENV_ROOT: /python
 
