@@ -57,7 +57,7 @@ nnoremap <leader>h <c-w>h
 nnoremap <leader>l <c-w>l
 nnoremap <leader>k <c-w>k
 nnoremap <leader>j <c-w>j
-nnoremap <leader>en :!node % 
+nnoremap <leader>en :w<bar>!clear && node %
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:ycm_key_list_select_completion=[]
