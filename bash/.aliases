@@ -94,17 +94,20 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias reload="exec $SHELL -l"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        # ...
+	echo
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        source ./.aliases-mac
+	source ./.aliases-mac
 elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
+	echo
 elif [[ "$OSTYPE" == "msys" ]]; then
         # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+	echo
 elif [[ "$OSTYPE" == "win32" ]]; then
         # I'm not sure this can happen.
+	echo
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
+	echo
 else
-        # Unknown.
+	echo
 fi
