@@ -2,35 +2,35 @@
 export PIP_REQUIRE_VIRTUALENV=true
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 syspip(){
-	if [ -z ${VIRTUAL_ENV} ]; then
+	if [ ! -z ${VIRTUAL_ENV} ]; then
 		echo 'Cannot execute this with an active virtualenv'
-		exit 1
+	else
+		PIP_REQUIRE_VIRTUALENV="" pip "$@"
 	fi
-	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 syspip2(){
-	if [ -z ${VIRTUAL_ENV} ]; then
+	if [ ! -z ${VIRTUAL_ENV} ]; then
 		echo 'Cannot execute this with an active virtualenv'
-		exit 1
-	fi
-    PIP_REQUIRE_VIRTUALENV="" pip2.7 "$@"
+	else
+    	PIP_REQUIRE_VIRTUALENV="" pip2.7 "$@"
+    fi
 }
 syspip3(){
-	if [ -z ${VIRTUAL_ENV} ]; then
+	if [ ! -z ${VIRTUAL_ENV} ]; then
 		echo 'Cannot execute this with an active virtualenv'
-		exit 1
-	fi
-    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+	else
+    	PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+    fi
 }
 
 syspip_upgrade_all(){
-	if [ -z ${VIRTUAL_ENV} ]; then
+	if [ ! -z ${VIRTUAL_ENV} ]; then
 		echo 'Cannot execute this with an active virtualenv'
-		exit 1
+	else
+	    export PIP_REQUIRE_VIRTUALENV=''
+	    pip freeze --local | grep -v ^-e | cut -d = -f 1  | xargs -n1 pip install -U
+	    export PIP_REQUIRE_VIRTUALENV=true
 	fi
-    export PIP_REQUIRE_VIRTUALENV=''
-    pip freeze --local | grep -v ^-e | cut -d = -f 1  | xargs -n1 pip install -U
-    export PIP_REQUIRE_VIRTUALENV=true
 }
 
 #export PATH="$HOME/bin:$PATH";
