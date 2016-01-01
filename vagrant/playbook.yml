@@ -49,7 +49,9 @@
     environment: 
       PYENV_ROOT: /python
   - name: Install Python versions
-    command: "/python/libexec/pyenv install 2.7.11 && python/libexec/pyenv install 3.5.1"
+    shell: 'eval "$(/python/bin/pyenv init -)" && /python/libexec/pyenv install 2.7.11 && /python/libexec/pyenv install 3.5.1'
     become: yes
     become_user: vagrant
+    environment:
+      PYENV_ROOT: /python
 
