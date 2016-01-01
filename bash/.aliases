@@ -30,10 +30,13 @@ alias dt="cd ~/Desktop"
 alias db="cd ~/DropBox"
 alias p="cd ~/Projects"
 alias tp="cd ~/TestProjects"
-#alias g="git"
+alias dot="cd ~/dotfiles"
+alias g="git"
 alias h="history"
 alias j="jobs"
 alias kp="killall python"
+
+alias commit="git add . && git commit -m 'standard commit' && git push"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
