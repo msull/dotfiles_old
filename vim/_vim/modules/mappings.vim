@@ -17,9 +17,10 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>en :w<CR>:!clear && node %
 
 " Toggle display of whitespace
-nnoremap <leader>ws :set list!<CR>
+" nnoremap <leader>ws :set list!<CR>
 
 nnoremap <leader>w :w<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 
 " Print out the current mappings.
 function! s:show_mappings()
