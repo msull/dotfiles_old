@@ -38,3 +38,11 @@ shopt -s cdspell;
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 eval "$(pyenv virtualenv-init -)"
+
+export PATH="/home/vagrant/.pyenv/bin:$PATH"
+if which pyenv > /dev/null; then
+	eval "$(pyenv init -)"
+fi
+if which pyenv > /dev/null; then
+	eval "$(pyenv virtualenv-init -)"
+fi
