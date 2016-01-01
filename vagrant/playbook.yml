@@ -70,5 +70,10 @@
     ignore_errors: yes
     environment:
       PYENV_ROOT: /python
+  - name: Install NodeJS repository
+    command: curl -sL https://deb.nodesource.com/setup_5.x | bash -
+  - name: Install NodeJS
+    apt: name=nodejs state=present
+
 
 
