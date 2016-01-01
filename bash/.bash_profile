@@ -1,16 +1,33 @@
 
 export PIP_REQUIRE_VIRTUALENV=true
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-
 syspip(){
+	if [ -z ${VIRTUAL_ENV} ]; then
+		echo 'Cannot execute this with an active virtualenv'
+		exit 1
+	fi
+	PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+syspip2(){
+	if [ -z ${VIRTUAL_ENV} ]; then
+		echo 'Cannot execute this with an active virtualenv'
+		exit 1
+	fi
     PIP_REQUIRE_VIRTUALENV="" pip2.7 "$@"
 }
 syspip3(){
+	if [ -z ${VIRTUAL_ENV} ]; then
+		echo 'Cannot execute this with an active virtualenv'
+		exit 1
+	fi
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
 syspip_upgrade_all(){
-    deactivate
+	if [ -z ${VIRTUAL_ENV} ]; then
+		echo 'Cannot execute this with an active virtualenv'
+		exit 1
+	fi
     export PIP_REQUIRE_VIRTUALENV=''
     pip freeze --local | grep -v ^-e | cut -d = -f 1  | xargs -n1 pip install -U
     export PIP_REQUIRE_VIRTUALENV=true
