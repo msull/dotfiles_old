@@ -36,7 +36,7 @@ alias h="history"
 alias j="jobs"
 alias kp="killall python"
 
-alias syncdot="cd ~/dotfiles && git pull && ./sync.sh && reload"
+alias syncdot="cd ~/dotfiles && git pull && ./sync.sh && reload && cd -"
 
 alias commit="git add . && git commit -m 'standard commit' && git push"
 
