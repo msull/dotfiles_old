@@ -50,7 +50,7 @@
     environment: 
       PYENV_ROOT: /python
   - name: Install Python 2.7.11
-    shell: '/python/libexec/pyenv install 2.7.11 && /python/libexec/pyenv install 3.5.1'
+    shell: '/python/libexec/pyenv install 2.7.11'
     become: yes
     become_user: vagrant
     ignore_errors: yes
