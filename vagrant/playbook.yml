@@ -76,6 +76,10 @@
     command: /tmp/nodejsinstaller.sh
   - name: Install NodeJS
     apt: name=nodejs state=present
-
+  - name: Update global Node.js packages
+    npm: name={{item}} global=yes
+    with_items:
+      - npm
+      - learnyounode
 
 

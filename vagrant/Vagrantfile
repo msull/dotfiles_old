@@ -3,6 +3,7 @@
 
 $script = <<SCRIPT
 if [ -e /python/libexec/pyenv ]; then
+	export PYENV_ROOT=/python
 	/python/libexec/pyenv global system
 fi
 SCRIPT
