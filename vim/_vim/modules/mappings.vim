@@ -4,8 +4,9 @@ inoremap jk <ESC>
 vnoremap . :norm .<CR>
 
 nnoremap <leader>p :set nopaste!<CR>
-nnoremap <leader>ln :set nonumber!<CR>
-nnoremap <leader>rn :set norelativenumber!<CR>
+nnoremap <leader>go :set nonumber<CR>:set norelativenumber<CR>
+nnoremap <leader>gn :set nonumber!<CR>
+nnoremap <leader>gr :set norelativenumber!<CR>
 
 " Move between splits
 nnoremap <leader>h <c-w>h
