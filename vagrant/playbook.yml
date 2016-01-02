@@ -13,6 +13,7 @@
       - libbz2-dev
       - libreadline-dev
       - libsqlite3-dev
+      - python-dev
       - wget
       - curl
       - llvm
@@ -85,5 +86,9 @@
     with_items:
       - npm
       - learnyounode
+      - typescript
+  - name: Build youcompleteme
+    command: /python/versions/2.7.11/bin/python /home/vagrant/.vim_plugins/youcompleteme/install.py --tern-completer
+
 
 
