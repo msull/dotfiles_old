@@ -33,6 +33,10 @@ syspip_upgrade_all(){
 	fi
 }
 
+md (){ 
+	mkdir -p "$@" && cd "$@";
+}
+
 #export PATH="$HOME/bin:$PATH";
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin/
 
