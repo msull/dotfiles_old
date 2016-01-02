@@ -13,7 +13,8 @@ nnoremap <leader>l <c-w>l
 nnoremap <leader>k <c-w>k
 nnoremap <leader>j <c-w>j
 
-" Execute Node
+" Execute Scripts
+nnoremap <leader>ep :w<CR>:!clear && python %
 nnoremap <leader>en :w<CR>:!clear && node %
 
 " Toggle display of whitespace
