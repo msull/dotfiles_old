@@ -52,7 +52,7 @@
     command: /python/installer.sh
     become: yes
     become_user: vagrant
-    environment: 
+    environment:
       PYENV_ROOT: /python
   - name: Install Python 2.7.11
     shell: '/python/libexec/pyenv install 2.7.11'
@@ -89,7 +89,7 @@
       - typescript
       - jshint
   - name: Build youcompleteme
-    command: /python/versions/2.7.11/bin/python /home/vagrant/.vim_plugins/youcompleteme/install.py --tern-completer
+    command: YCM_CORES=1 /python/versions/2.7.11/bin/python /home/vagrant/.vim_plugins/youcompleteme/install.py --tern-completer
 
 
 
