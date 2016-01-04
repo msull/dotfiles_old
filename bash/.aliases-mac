@@ -4,7 +4,7 @@ localdev (){
     if [ ! -z $MACHINEID ]; then
         echo "Checking if Vagrant box with ID ${MACHINEID} is running"
         vagrant global-status | grep $MACHINEID | grep -q running
-        if [ ! $? ]; then
+        if [ $? -eq 1 ]; then
             echo "Bringing machine up"
             vagrant up $MACHINEID
         fi
