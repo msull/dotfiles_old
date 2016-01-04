@@ -90,6 +90,3 @@
       - jshint
   - name: Build youcompleteme
     command: YCM_CORES=2 /python/versions/2.7.11/bin/python /home/vagrant/.vim_plugins/youcompleteme/install.py --tern-completer
-
-
-
