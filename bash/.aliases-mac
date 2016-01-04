@@ -2,17 +2,17 @@
 localdev (){
     MACHINEID=$(vagrant global-status | grep devmachine | cut -d ' ' -f 1)
     if [ ! -z $MACHINEID ]; then
-        echo 'Checking if Vagrant box with ID ${MACHINEID} is running'
+        echo "Checking if Vagrant box with ID ${MACHINEID} is running"
         vagrant global-status | grep $MACHINEID | grep -q running
         if [ ! $? ]; then
-            echo 'Bringing machine up'
+            echo "Bringing machine up"
             vagrant up $MACHINEID
         fi
-        echo 'Connecting to machine'
+        echo "Connecting to machine"
         vagrant ssh $MACHINEID
 
     else
-        echo 'Vagrant ID not found'
+        echo "Vagrant ID not found"
     fi
 }
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
