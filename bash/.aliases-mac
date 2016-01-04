@@ -1,3 +1,20 @@
+# Check if Local Dev virtual machine is booted, bring it up if not, and connect to it
+localdev (){
+    MACHINEID=$(vagrant global-status | grep devmachine | cut -d ' ' -f 1)
+    if [ ! -z $MACHINEID ]; then
+        echo 'Checking if Vagrant box with ID ${MACHINEID} is running'
+        vagrant global-status | grep $MACHINEID | grep -q running
+        if [ ! $? ]; then
+            echo 'Bringing machine up'
+            vagrant up $MACHINEID
+        fi
+        echo 'Connecting to machine'
+        vagrant ssh $MACHINEID
+
+    else
+        echo 'Vagrant ID not found'
+    fi
+}
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew cask update; brew cask cleanup; #sudo gem update --system; sudo gem update'
 # npm install npm -g; npm update -g;
