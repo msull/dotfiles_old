@@ -31,6 +31,7 @@
     git: repo=https://www.github.com/msull/dotfiles dest=/home/vagrant/dotfiles
     become: yes
     become_user: vagrant
+    ignore_errors: yes
   - name: Sync dotfiles
     command: /home/vagrant/dotfiles/sync.sh
     become: yes
@@ -90,5 +91,5 @@
       - jshint
   - name: Build youcompleteme
     command: /python/versions/2.7.11/bin/python /home/vagrant/.vim_plugins/youcompleteme/install.py --tern-completer
-      environtment:
-        YCM_CORES=1
+    environment:
+      YCM_CORES: 1
