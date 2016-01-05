@@ -28,7 +28,7 @@
       - git
       - mercurial
   - name: Clone dotfiles repo
-    git: repo=git://github.com/msull/dotfiles.git
+    git: repo=git://github.com/msull/dotfiles.git dest=/home/vagrant/dotfiles
     become: yes
     become_user: vagrant
     ignore_errors: yes
