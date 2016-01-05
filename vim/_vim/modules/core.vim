@@ -69,6 +69,10 @@ set colorcolumn=80
 set splitright
 set splitbelow
 
+" ================ Filetype tab settings ===========
+au FileType yaml setlocal softwidth=2 softtabstop=2 expandtab
+
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
