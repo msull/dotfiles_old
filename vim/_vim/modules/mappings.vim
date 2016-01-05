@@ -1,5 +1,8 @@
 let mapleader="\<SPACE>"
 
+" clear search result highlights with enter key
+:nnoremap <CR> :noh<CR><CR>
+
 inoremap jk <ESC>
 vnoremap . :norm .<CR>
 
@@ -23,6 +26,7 @@ nnoremap <leader>en :w<CR>:!clear && node %
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>fq :q!<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 
 " Print out the current mappings.
