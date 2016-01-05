@@ -1,5 +1,8 @@
 let mapleader="\<SPACE>"
 
+" clear search result highlights with enter key
+:nnoremap <CR> :noh<CR><CR>
+
 inoremap jk <ESC>
 vnoremap . :norm .<CR>
 
