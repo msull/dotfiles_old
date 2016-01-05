@@ -70,7 +70,7 @@ set splitright
 set splitbelow
 
 " ================ Filetype tab settings ===========
-au FileType yaml setlocal softwidth=2 softtabstop=2 expandtab
+au FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
 
 " ================ Scrolling ========================
