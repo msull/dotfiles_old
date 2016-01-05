@@ -28,3 +28,6 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 .anaconda
+
+# vim
+*.swp
