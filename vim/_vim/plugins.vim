@@ -8,4 +8,4 @@ Plug 'majutsushi/tagbar'
 Plug 'sirver/ultisnips'
 Plug 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
-
+Plug 'pearofducks/ansible-vim'
