@@ -27,7 +27,6 @@ set encoding=utf-8
 set showmode
 set scrolloff=3
 set autoindent
-set showmode
 set showcmd
 set hidden
 set wildmenu
@@ -38,11 +37,25 @@ set backspace=indent,eol,start
 set laststatus=2
 set number
 set relativenumber
-set noundofile
 set wrap
 set linebreak
 set nolist
 set colorcolumn=80
+set splitright
+set splitbelow
+
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+" ================ Search ===========================
+
+set incsearch       " Find the next match as we type the search
+set hlsearch        " Highlight searches by default
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...unless we type a capital
 
 " set mouse=a
 
