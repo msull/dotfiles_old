@@ -22,6 +22,7 @@ nnoremap <leader>en :w<CR>:!clear && node %
 " nnoremap <leader>ws :set list!<CR>
 
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 
 " Print out the current mappings.
