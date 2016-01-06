@@ -32,7 +32,7 @@ fi
 # Remove Plugins I don't want on remote
 for PLUG in youcompleteme ultisnips
 do
-    grep -v "$PLUG" ~/.vim/plugins.vim > /tmp/plugins.tmp; mv /tmp/plugings.tmp ~/.vim/plugins.vim
+    grep -v "$PLUG" ~/.vim/plugins.vim > /tmp/plugins.tmp; mv /tmp/plugins.tmp ~/.vim/plugins.vim
 done
 
 
