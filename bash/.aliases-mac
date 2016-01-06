@@ -5,8 +5,14 @@ localdev (){
         echo "Checking if Vagrant box with ID ${MACHINEID} is running"
         vagrant global-status | grep $MACHINEID | grep -q running
         if [ $? -eq 1 ]; then
+            # for some reason trying to vagrant up using the global ID
+            # is failing, indicating the machine is locked
             echo "Bringing machine up"
-            vagrant up $MACHINEID
+            TEMPPWD=$(pwd)
+            cd ~/dotfiles/vagrant
+            vagrant up
+            cd $TEMPPWD
+            unset $TEMPPWD
         fi
         echo "Connecting to machine"
         vagrant ssh $MACHINEID
