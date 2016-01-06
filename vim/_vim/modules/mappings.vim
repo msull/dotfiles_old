@@ -13,6 +13,12 @@ nnoremap <leader>gr :set norelativenumber!<CR>
 
 nnoremap <leader>n :tabn<CR>
 
+" Resize splits with arrow keys
+nnoremap <Up> :res +3<CR>
+nnoremap <Down> :res -3 <CR>
+nnoremap <Left> :vertical res -3<CR>
+nnoremap <Right> :vertical res +3<CR>
+
 " Move between splits
 nnoremap <leader>h <c-w>h
 nnoremap <leader>l <c-w>l
