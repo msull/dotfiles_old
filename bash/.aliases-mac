@@ -12,7 +12,6 @@ localdev (){
             cd ~/dotfiles/vagrant
             vagrant up
             cd $TEMPPWD
-            unset $TEMPPWD
         fi
         echo "Connecting to machine"
         vagrant ssh $MACHINEID
