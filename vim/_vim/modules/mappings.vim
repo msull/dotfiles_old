@@ -11,6 +11,8 @@ nnoremap <leader>go :set nonumber<CR>:set norelativenumber<CR>
 nnoremap <leader>gn :set nonumber!<CR>
 nnoremap <leader>gr :set norelativenumber!<CR>
 
+nnoremap <leader>n :tabn<CR>
+
 " Move between splits
 nnoremap <leader>h <c-w>h
 nnoremap <leader>l <c-w>l
