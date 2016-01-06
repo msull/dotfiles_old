@@ -69,6 +69,8 @@ set colorcolumn=80
 set splitright
 set splitbelow
 
+set mouse=a
+
 " ================ Filetype tab settings ===========
 au FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
