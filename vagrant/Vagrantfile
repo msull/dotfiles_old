@@ -11,6 +11,7 @@ SCRIPT
 
 Vagrant.configure(2) do |config|
     config.vm.define "devmachine" do |virt|
+        virt.vm.hostname = "devmachine"
         virt.vm.box = "ubuntu/trusty64"
         virt.vm.network "private_network", type: "dhcp"
         virt.ssh.forward_agent = true
