@@ -65,3 +65,23 @@ if which pyenv > /dev/null; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
 fi
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    source ~/.bash_profile-linux
+	echo
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    echo
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+        # POSIX compatibility layer and Linux environment emulation for Windows
+	echo
+elif [[ "$OSTYPE" == "msys" ]]; then
+        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+	echo
+elif [[ "$OSTYPE" == "win32" ]]; then
+        # I'm not sure this can happen.
+	echo
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+	echo
+else
+	echo
+fi
