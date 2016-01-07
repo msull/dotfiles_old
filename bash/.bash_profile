@@ -68,7 +68,6 @@ fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     source ~/.bash_profile-linux
-	echo
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo
 elif [[ "$OSTYPE" == "cygwin" ]]; then
