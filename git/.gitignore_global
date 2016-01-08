@@ -1,5 +1,7 @@
 .python-version
 
+.coverage
+
 .cache
 
 # Dir that can be added to any project and ignored
