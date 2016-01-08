@@ -65,7 +65,7 @@ set relativenumber
 set wrap
 set linebreak
 set nolist
-set colorcolumn=80
+set colorcolumn=100
 set splitright
 set splitbelow
 
