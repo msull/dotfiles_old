@@ -36,9 +36,10 @@ alias h="history"
 alias j="jobs"
 alias kp="killall python"
 
+# easy management of dotfiles
+alias commitdot="cd ~/dotfiles && git add . && git commit -m 'standard commit' && git push"
 alias syncdot="cd ~/dotfiles && git pull && ./sync.sh && reload"
-
-alias commit="git add . && git commit -m 'standard commit' && git push"
+alias updatedot=commitdot && syncdot
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
