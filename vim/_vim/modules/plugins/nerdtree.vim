@@ -3,7 +3,7 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 " let g:NERDTreeDirArrowCollapsible = 'x'
 let g:NERDTreeAutoCenter = 1
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeIgnore = ['\.swp$', '\.pyc$']
 
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
