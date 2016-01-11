@@ -1,6 +1,13 @@
 
 export PIP_REQUIRE_VIRTUALENV=true
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+mkvirt(){
+    if [ ! -z $1 ]; then
+        pyenv virtualenv $1 ${PWD##*/} && pyenv local ${PWD##*/}
+    else
+        pyenv virtualenv ${PWD##*/} && pyenv local ${PWD##*/}
+    fi
+}
 syspip(){
 	if [ ! -z ${VIRTUAL_ENV} ]; then
 		echo 'Cannot execute this with an active virtualenv'
