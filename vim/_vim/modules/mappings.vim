@@ -1,5 +1,8 @@
 let mapleader="\<SPACE>"
 
+" Toggle spellchecking
+:nnoremap <leader>s :setlocal spell! spelllang=en_us<CR>
+
 " clear search result highlights with enter key
 :nnoremap <leader><CR> :noh<CR>
 
