@@ -91,3 +91,6 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
 	echo
 fi
+
+# Enable fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
