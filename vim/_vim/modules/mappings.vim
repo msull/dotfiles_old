@@ -32,6 +32,8 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>rp :w<CR>:!clear && python %
 nnoremap <leader>rtp :w<CR>:!clear && py.test -v %
 nnoremap <leader>rn :w<CR>:!clear && node %
+nnoremap <leader>ri :w<CR>:!clear && ./%
+
 
 " Toggle display of whitespace
 " nnoremap <leader>ws :set list!<CR>
