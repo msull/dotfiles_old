@@ -4,7 +4,7 @@ alias sd='ssh services-dev.lab'
 alias mdl='markdownlinker doc-raw.md > DOC.md'
 alias mergemaster='git checkout master && git merge --no-ff develop'
 alias pushtagmaster='git push origin --tags master && git checkout develop && git merge master && git push origin develop'
-
+alias cleanpyc='find . -name '*.pyc' -exec rm {} \;'
 alias bumpversion='bumpversion --verbose'
 
 alias vs='vagrant ssh'
