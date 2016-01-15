@@ -1,5 +1,5 @@
 " Plug 'valloric/youcompleteme'
-Plug 'scroolose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 "Plug 'altercation/vim-colors-solarized'
