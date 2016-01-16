@@ -29,10 +29,10 @@ nnoremap <leader>k <c-w>k
 nnoremap <leader>j <c-w>j
 
 " Execute Scripts
-nnoremap <leader>rp :w<CR>:!clear && python %
-nnoremap <leader>rtp :w<CR>:!clear && py.test -v %
-nnoremap <leader>rn :w<CR>:!clear && node %
-nnoremap <leader>ri :w<CR>:!clear && ./%
+nnoremap <leader>rp :w<CR>:!clear && python %<space>
+nnoremap <leader>rtp :w<CR>:!clear && py.test -v %<space>
+nnoremap <leader>rn :w<CR>:!clear && node %<space>
+nnoremap <leader>ri :w<CR>:!clear && ./%<space>
 
 
 " Toggle display of whitespace
