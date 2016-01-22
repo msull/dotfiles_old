@@ -24,9 +24,9 @@ Vagrant.configure(2) do |config|
         virt.vm.provision "ansible_local" do |ansible|
             ansible.playbook = "/vagrant/playbook.yml"
         end
-        if File.directory?(File.expand_path("~/workspace"))
-            virt.vm.synced_folder "~/workspace", "/home/vagrant/workspace", nfs: true
-        end
+        #if File.directory?(File.expand_path("~/workspace"))
+            #virt.vm.synced_folder "~/workspace", "/home/vagrant/workspace", nfs: true
+        #end
 
         virt.vm.provider :virtualbox do |vb|
             vb.name = "devbox"
