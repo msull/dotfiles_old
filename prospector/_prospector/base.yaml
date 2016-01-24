@@ -1,0 +1,4 @@
+inherits:
+  - default
+  - strictness_high
+  - full_pep8
