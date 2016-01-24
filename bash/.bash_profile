@@ -7,6 +7,7 @@ mkvirt(){
     else
         pyenv virtualenv ${PWD##*/} && pyenv local ${PWD##*/}
     fi
+    pip install prospector
 }
 syspip(){
 	if [ ! -z ${VIRTUAL_ENV} ]; then
