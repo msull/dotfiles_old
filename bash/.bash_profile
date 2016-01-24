@@ -7,6 +7,7 @@ mkvirt(){
     else
         pyenv virtualenv ${PWD##*/} && pyenv local ${PWD##*/}
     fi
+    pip install --upgrade pip
     pip install prospector
 }
 syspip(){
