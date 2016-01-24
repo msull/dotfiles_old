@@ -1,4 +1,26 @@
-inherits:
-  - default
-  - strictness_high
-  - full_pep8
+output-format: json
+
+strictness: medium
+test-warnings: true
+doc-warnings: false
+
+#inherits:
+  #- my/other/profile.yml
+
+ignore-paths:
+  - docs
+
+ignore-patterns:
+  - (^|/)skip(this)?(/|$)
+
+pep8:
+  #disable:
+    #- W602
+    #- W603
+  #enable:
+    #- W601
+  options:
+    max-line-length: 100
+
+mccabe:
+  run: true
