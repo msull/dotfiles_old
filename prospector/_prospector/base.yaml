@@ -13,6 +13,10 @@ ignore-paths:
 ignore-patterns:
   - (^|/)skip(this)?(/|$)
 
+pylint:
+  disable:
+    - invalid-name
+
 pep8:
   disable:
     - W602
