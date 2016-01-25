@@ -11,6 +11,9 @@ let g:syntastic_check_on_w = 0
 let g:syntastic_check_on_wq = 0
 
 nnoremap <leader>sc :SyntasticCheck<CR>
+nnoremap <leader>se :Errors<CR>
+nnoremap <leader>sn :lnext<CR>
+
 
 
 fun! ProspectorProfile()
