@@ -10,6 +10,8 @@ nnoremap ;' :%s:::gci<left><left><left><left><left>
 " clear search result highlights with enter key
 :nnoremap <leader><CR> :noh<CR>
 
+:nnoremap <leader>s :lnext<CR>
+
 inoremap jk <ESC>
 vnoremap . :norm .<CR>
 
