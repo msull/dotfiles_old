@@ -14,11 +14,11 @@ ignore-patterns:
   - (^|/)skip(this)?(/|$)
 
 pep8:
-  #disable:
-    #- W602
-    #- W603
-  #enable:
-    #- W601
+  disable:
+    - W602
+    - W603
+  enable:
+    - W601
   options:
     max-line-length: 100
 
