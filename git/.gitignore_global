@@ -12,6 +12,7 @@ ignoredir
 .vagrant
 # Compiled Python files
 *.pyc
+*.egg-info
 
 # Folder view configuration files
 .DS_Store
