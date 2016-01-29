@@ -3,12 +3,11 @@ export PIP_REQUIRE_VIRTUALENV=true
 #export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 mkvirt(){
     if [ ! -z $1 ]; then
-        pyenv virtualenv $1 ${PWD##*/} && pyenv local ${PWD##*/}
+        pyenv virtualenv --system-site-packages $1 ${PWD##*/} && pyenv local ${PWD##*/}
     else
-        pyenv virtualenv ${PWD##*/} && pyenv local ${PWD##*/}
+        pyenv virtualenv --system-site-packages ${PWD##*/} && pyenv local ${PWD##*/}
     fi
-    pip install --upgrade pip
-    pip install prospector
+    pip_upgradeall
 }
 syspip(){
 	if [ ! -z ${VIRTUAL_ENV} ]; then
