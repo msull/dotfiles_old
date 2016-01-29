@@ -7,7 +7,6 @@ mkvirt(){
     else
         pyenv virtualenv --system-site-packages ${PWD##*/} && pyenv local ${PWD##*/}
     fi
-    pip_upgradeall
 }
 syspip(){
 	if [ ! -z ${VIRTUAL_ENV} ]; then
