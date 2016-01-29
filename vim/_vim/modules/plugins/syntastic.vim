@@ -27,4 +27,4 @@ fun! ProspectorProfile()
 endfun
 
 let g:syntastic_python_checkers = ['prospector']
-let g:syntastic_python_prospector_args = ' --profile-path $HOME/.prospector --profile ' . ProspectorProfile()
+let g:syntastic_python_prospector_args = ' --profile-path $HOME/.prospector -P ' . ProspectorProfile()
