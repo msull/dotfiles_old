@@ -38,7 +38,7 @@ alias kp="killall python"
 
 # easy management of dotfiles
 alias commitdot="cd ~/dotfiles && git add . && git commit -m 'standard commit' && git push"
-alias syncdot="cd ~/dotfiles && git pull && ./sync.sh && reload"
+alias syncdot="pushd ~/dotfiles && git pull && ./sync.sh && popd && reload"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
