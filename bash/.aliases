@@ -37,7 +37,7 @@ alias j="jobs"
 alias kp="killall python"
 
 # easy management of dotfiles
-alias commitdot="cd ~/dotfiles && git add . && git commit -m 'standard commit' && git push"
+alias commitdot="pushd ~/dotfiles && git add . && git commit -m 'standard commit' && git push && popd"
 alias syncdot="pushd ~/dotfiles && git pull && ./sync.sh && popd && reload"
 
 # Detect which `ls` flavor is in use
