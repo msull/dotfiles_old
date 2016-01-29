@@ -1,3 +1,4 @@
+local_env_vars
 node_modules
 
 .python-version
