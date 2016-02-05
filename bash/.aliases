@@ -7,6 +7,8 @@ alias pushtagmaster='git push origin --tags master && git checkout develop && gi
 alias cleanpyc='find . -name '*.pyc' -exec rm {} \;'
 alias bumpversion='bumpversion --verbose'
 
+alias upm='git checkout master && git pull && git fetch --tags && git checkout -'
+
 alias vs='vagrant ssh'
 alias vh='vagrant halt'
 alias vu='vagrant up'
@@ -35,6 +37,20 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias kp="killall python"
+
+# Stolen from here: http://hayne.net/MacDev/Bash/aliases.bash
+# ff:  to find a file under the current directory
+ff () { /usr/bin/find . -name "$@" ; }
+# ffs: to find a file whose name starts with a given string
+ffs () { /usr/bin/find . -name "$@"'*' ; }
+# ffe: to find a file whose name ends with a given string
+ffe () { /usr/bin/find . -name '*'"$@" ; }
+
+# grepfind: to grep through files found by find, e.g. grepf pattern '*.c'
+# note that 'grep -r pattern dir_name' is an alternative if want all files 
+grepfind () { find . -type f -name "$2" -print0 | xargs -0 grep "$1" ; }
+# I often can't recall what I named this alias, so make it work either way: 
+alias findgrep='grepfind'
 
 # easy management of dotfiles
 alias commitdot="pushd ~/dotfiles && git add . && git commit -m 'standard commit' && git push && popd"
