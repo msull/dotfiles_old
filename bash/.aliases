@@ -1,5 +1,5 @@
 alias gll="git log --name-status -1 HEAD"
-alias glc="git diff HEAD^ HEAD"
+alias gld="git diff HEAD^ HEAD"
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias sp='ssh services-prod01.iad2'
 alias sd='ssh services-dev.lab'
@@ -56,6 +56,7 @@ alias findgrep='grepfind'
 
 # easy management of dotfiles
 alias commitdot="pushd ~/dotfiles && git add . && git commit -m 'standard commit' && git push && popd"
+alias editdot="vi -c \"cd ~/dotfiles\""
 alias syncdot="pushd ~/dotfiles && git pull && ./sync.sh && popd && reload"
 
 # Detect which `ls` flavor is in use
