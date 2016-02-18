@@ -16,6 +16,9 @@ let g:solarized_termtrans = 1
 
 silent! colorscheme solarized
 
+" use system clipboard for yank
+set clipboard=unnamed
+
 " Automatically enter/exit paste mode when pasting in an ssh session
 " Amazing good times
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
