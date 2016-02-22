@@ -13,6 +13,8 @@ nnoremap <leader><CR> :noh<CR>
 inoremap jk <ESC>
 vnoremap . :norm .<CR>
 
+nnoremap <leader>c "*yy
+
 nnoremap <leader>p :set nopaste!<CR>
 nnoremap <leader>go :set nonumber<CR>:set norelativenumber<CR>
 nnoremap <leader>gn :set nonumber!<CR>
