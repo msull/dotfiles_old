@@ -1,3 +1,4 @@
+alias fp="fc -s | fpp"
 alias gll="git log --invert-grep --grep=\"Merge pull request\" --name-status -1 HEAD"
 alias gld="git diff HEAD^ HEAD"
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
