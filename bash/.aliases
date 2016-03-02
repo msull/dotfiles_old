@@ -17,7 +17,7 @@ alias vs='vagrant ssh'
 alias vh='vagrant halt'
 alias vu='vagrant up'
 alias v.create='mkvirt'
-alias v.kill='pyenv uninstall -f ${PWD##*/}'
+alias v.kill='pyenv uninstall -f ${PWD##*/} && rm .python-version'
 alias v.recreate='v.kill && v.create'
 alias pip_upgradeall='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 
