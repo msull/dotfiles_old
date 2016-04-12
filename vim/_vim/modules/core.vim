@@ -94,4 +94,4 @@ set smartcase       " ...unless we type a capital
 " set mouse=a
 
 " automatically change window's cwd to file's dir
-set autochdir
+"set autochdir

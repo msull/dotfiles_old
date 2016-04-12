@@ -1,5 +1,5 @@
 "Plug 'valloric/youcompleteme'
-Plug 'lambdalisue/vim-pyenv'
+"Plug 'lambdalisue/vim-pyenv'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'

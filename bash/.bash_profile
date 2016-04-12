@@ -95,6 +95,3 @@ else
 fi
 
 export PATH="~/.local/bin:$PATH"
-
-# Enable fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
