@@ -11,6 +11,8 @@ alias pushtagmaster='git push origin --tags master && git checkout develop && gi
 alias cleanpyc='find . -name '*.pyc' -exec rm {} \;'
 alias bumpversion='bumpversion --verbose'
 
+alias server="python -m SimpleHTTPServer"
+
 alias upm='git checkout master && git pull && git fetch --tags && git checkout -'
 
 alias vs='vagrant ssh'
